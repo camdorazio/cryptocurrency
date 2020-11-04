@@ -12,8 +12,17 @@ connect (returns engine)
 '''
 
 """
+import os
+from dotenv import load_dotenv
+import requests
 import numpy as np
 import pandas as pd
+import panel as pn
+from panel.interact import interact
+from panel import widgets
+import plotly.express as px
+pn.extension('plotly')
+import hvplot.pandas
 from sqlalchemy import create_engine
  #to be used with pandas
  #work in progress
@@ -24,6 +33,7 @@ class Finhelper: #fin helper
         df = pd.read_csv(in_path, index_col = 0, parse_dates = True, infer_datetime_format = True)
         df.dropna(inplace = True)
         df.drop_duplicates(inplace = True)
+        df.sort_index()
         return df
 
     def get_cov(df, tick, ind):
@@ -134,3 +144,70 @@ class SQLhelper:
     def connect(self,db_name):
         engine = create_engine(f"postgresql://postgres:postgres@localhost:5432/{db_name}")
         return engine
+
+class PVHelper:
+    def __init__():
+        pass
+    
+    def hvscatter(self,df,x,y, title = "Scatter Plot"):
+        return df.hvplot.scatter(
+            x = x,
+            y = y,
+            title = title
+        )
+
+    def pxscatter(self,df,x,y,title = "Scatter Plot"):
+        return px.scatter(
+            df,
+            x = x,
+            y = y,
+            title = title
+        )
+    
+    def mapbox(self,df,lat,lon,keyname = "mapbox"):
+        load_dotenv()
+        mb_api = os.getenv("mapbox")
+        px.set_mapbox_access_token(mb_api)
+        scatter_map = px.scatter_mapbox(
+            df,
+            lat = lat,
+            lon = lon
+        )
+        return scatter_map
+
+class APIHelper:
+    def __init__():
+        pass
+
+    def get(self,url, param = ""):
+        url += f"{param}?format=json"
+        response_data = requests.get(url).json()
+        return response_data
+
+    def view(self, response):
+        print(json.dumps(data,indent = 4))
+
+    def alpaca_create(self, keyname = "ALPACA_API_KEY", secret = "ALPACA_SECRET_KEY"):
+        #!!alpaca_trade_api must be loaded as tradeapi
+        aak = os.getenv(keyname)
+        ask = os.getenv(secret)
+
+        alpaca = tradeapi.REST(
+            aak,
+            ask,
+            api_version="v2"
+        )
+        return alpaca
+
+    def get_alpaca(self,api,ticker_list,start,end, timeframe = "1D"):
+        s = pd.Timestamp(start,tz = "America/New_York").isoformat()
+        e = pd.Timestamp(end,tz = "America/New_York").isoformat()
+        
+        df = api.get_barset(
+            ticker_list,
+            timeframe,
+            start = s,
+            end = e
+
+        ).df
+        return df
