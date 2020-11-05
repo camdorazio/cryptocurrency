@@ -1,5 +1,9 @@
 
+#pyhelper.py import file.  Acts as a wrapper around common FinTech code
+#Currently has 4 classes - Finhelper, SQLhelper, PVhelper, and APIhelper
 
+#Written by toddshev, if anything is broken or you think anything can be added, let me know
+#Otherwise, hopefully it's helpful
 """
 '''
 Fin methods:
@@ -13,10 +17,13 @@ connect (returns engine)
 
 """
 import os
+import json
+from pathlib import Path
 from dotenv import load_dotenv
 import requests
 import numpy as np
 import pandas as pd
+import alpaca_trade_api as tradeapi
 import panel as pn
 from panel.interact import interact
 from panel import widgets
@@ -30,10 +37,20 @@ class Finhelper: #fin helper
     def __init__(self):
         pass
     def load_and_clean(self,in_path):
-        df = pd.read_csv(in_path, index_col = 0, parse_dates = True, infer_datetime_format = True)
-        df.dropna(inplace = True)
-        df.drop_duplicates(inplace = True)
-        df.sort_index()
+        """
+        Will read in csv from path using Path method, index first column, parse dates,
+        drop NA's, drop duplicates, and sort by the index. Returns dataframe
+        """
+        in_path = Path(in_path)
+        try:
+            df = pd.read_csv(in_path, index_col = 0, parse_dates = True, infer_datetime_format = True)
+        except:
+            print("Could not read csv file.  Please check the path")
+        finally:
+            #attempt to clean df
+            df.dropna(inplace = True)
+            df.drop_duplicates(inplace = True)
+            df.sort_index()
         return df
 
     def get_cov(df, tick, ind):
@@ -45,36 +62,50 @@ class Finhelper: #fin helper
         return df.corr()
         
     def get_beta(self,df,tick,ind):
-        #get beta from dataframe, ticker, and index, uses get_cov
+        """
+        Need to supply dataframe, ticker, and index to compare it to
+        Calls get_cov method
+        """
         cov = get_cov(df,tick,ind)
         var = df[ind].var()
         beta = cov / var
         return beta
 
-    def get_sharpe(self,df, df_type):
-        #df_type should be either "price" or "returns" based on dataframe passed in
+    def get_sharpe(self,df, df_type = "returns"):
+        """
+        Requires dataframe.  If no df_type or "returns" provided, will assume DF has percent changes
+        If "price" is passed, will calculate the pct change prior to returning sharpe ratios
+        """
         if df_type == "price":
-            df = df.pct_change(inplace = True)
+            df = df.pct_change()
         sharpe = (df.mean() * 252) / (df.std() * np.sqrt(252))
         return sharpe
         
     def get_volatility(self,df):
         #annualized standard deviation
-        return df.std() * np.sqrt(252)
-        
+        df = df.std() * np.sqrt(252)
+        df.sort_values(inplace = True)
+        return df
     def allocate(self,weights, df):
-        #weighted portfolio, weights must be a list of same count as assets
+        """
+        Must pass in weights that match list of assets, then dataframe
+        """
         return df.dot(weights)
         
     def get_cum_returns(self,df, init_inv = 1):
-        #dataframe must be daily_returns.  Optional investment amount as 2nd arg
+        """
+        Dataframe must be daily returns.  Optional investment amount as 2nd argument
+        """
         return ((1 + df).cumprod()) * init_inv
         
-    def drop(self):
-        #returns help text...thought I'd try this out
-        return f"dataframe.drop(columns=['column1', 'column2', 'column3'], inplace=True)"
-        #return "Hello"
-    def get_rolling(df, days):
+    def drop(self,df, column_list):
+        """
+        Requires dataframe and list of coumns you wish to remove
+        """
+        df.drop(columns = column_list, inplace = True)
+        return df
+   
+    def get_rolling(self,df, days):
         #returns rolling average
         return df.rolling(window=days).mean()
             
@@ -142,11 +173,14 @@ class SQLhelper:
         )
         
     def connect(self,db_name):
-        engine = create_engine(f"postgresql://postgres:postgres@localhost:5432/{db_name}")
+        try:
+            engine = create_engine(f"postgresql://postgres:postgres@localhost:5432/{db_name}")
+        except:
+            print(f"Issue connecting to {db_name}")
         return engine
 
-class PVHelper:
-    def __init__():
+class PVhelper:
+    def __init__(self):
         pass
     
     def hvscatter(self,df,x,y, title = "Scatter Plot"):
@@ -167,39 +201,66 @@ class PVHelper:
     def mapbox(self,df,lat,lon,keyname = "mapbox"):
         load_dotenv()
         mb_api = os.getenv("mapbox")
-        px.set_mapbox_access_token(mb_api)
-        scatter_map = px.scatter_mapbox(
-            df,
-            lat = lat,
-            lon = lon
-        )
+        if not type(mb_api) is str:
+            raise TypeError("Could not find mapbox key")
+        else:
+            try:
+                px.set_mapbox_access_token(mb_api)
+            except:
+                print("Could not set mapbox key")
+            finally:  #in case it will still load
+                scatter_map = px.scatter_mapbox(
+                    df,
+                    lat = lat,
+                    lon = lon
+                )
         return scatter_map
 
-class APIHelper:
-    def __init__():
+class APIhelper:
+    def __init__(self):
         pass
+        #self.response_data = {}
 
-    def get(self,url, param = ""):
-        url += f"{param}?format=json"
-        response_data = requests.get(url).json()
+    def get(self, url, **kwargs):
+        try:
+            url += f"?format=json"
+            if type(kwargs) == None:
+                response_data = requests.get(url).json()
+            else:
+                response_data = requests.get(url, params = kwargs).json()
+        except:
+            if type(kwargs) ==None:
+                response_data = requests.get(url)
+            else:
+                response_data = requests.get(url, params = kwargs)
         return response_data
 
-    def view(self, response):
+    def view(self, data):
         print(json.dumps(data,indent = 4))
 
     def alpaca_create(self, keyname = "ALPACA_API_KEY", secret = "ALPACA_SECRET_KEY"):
-        #!!alpaca_trade_api must be loaded as tradeapi
+        """
+        Default key names are "ALPACA_API_KEY" and "ALPACA_SECRET_KEY".
+        If your .env differs, enter those key names as strings
+        """
         aak = os.getenv(keyname)
         ask = os.getenv(secret)
-
+        if type(aak) is not str | type(aak) is not str:
+            raise Exception("Could not load API or Secret Key")
+        #try to create object regardless    
         alpaca = tradeapi.REST(
             aak,
             ask,
             api_version="v2"
         )
+        self.alpaca_api = alpaca
         return alpaca
 
-    def get_alpaca(self,api,ticker_list,start,end, timeframe = "1D"):
+    def get_alpaca_data(self,ticker_list,start,end, timeframe = "1D"):
+        """
+        Requires you to run alpaca_create first, dates should be entered as 'yy-mm-dd'
+        Default timeframe is '1D', you may change this if desired
+        """
         s = pd.Timestamp(start,tz = "America/New_York").isoformat()
         e = pd.Timestamp(end,tz = "America/New_York").isoformat()
         
