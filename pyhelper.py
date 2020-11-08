@@ -23,7 +23,8 @@ from dotenv import load_dotenv
 import requests
 import numpy as np
 import pandas as pd
-import alpaca_trade_api as tradeapi
+from pandas.io.json import json_normalize
+#import alpaca_trade_api as tradeapi
 import panel as pn
 from panel.interact import interact
 from panel import widgets
@@ -233,7 +234,17 @@ class APIhelper:
                 response_data = requests.get(url)
             else:
                 response_data = requests.get(url, params = kwargs)
-        return response_data
+                
+       # pd.json_normalize(response_data)
+        df = pd.DataFrame(response_data)
+        return df
+
+    def get_row(self, df, column, val):
+        df = df.loc[(df[column] == val)]
+    
+#    def get_rows(self, df, column, *args):
+#        for item in args:
+ #           df = df.append(df.loc[(df[column] == item)])
 
     def view(self, data):
         print(json.dumps(data,indent = 4))
