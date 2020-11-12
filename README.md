@@ -11,13 +11,19 @@ A 19-year-old programmer from Toronto, Vitalik Buterin, conceived the idea for *
 # What is Blockchain technology and how does it work?
 *Blockchain* technology is highly sophisticated and a complex structure with many substructures. Blockchain allows for decentralization, i.e. no central regulatory body who oversees the transactions on the platform. Instead, it uses what is referred to as a *distributed or digital ledger* (NOTE: these terms are used interchangibly). The simplest way to describe what *Blockchain* is, or how it works is: “Picture a spreadsheet that is duplicated thousands of times across a network of computers. Then imagine that this network is designed to regularly update this spreadsheet and you have a basic understanding of the blockchain.” <sup>4</sup>
 
-## There are 3 pillars of *Blockchain*: a.) Decentralization, Transparencey, and Immutability
+## There are 3 pillars of *Blockchain*:
+    a.) Decentralization, 
+    b.) Transparency, and
+    c.) Immutability
+    
 1. Decentralization
-    - defined as data is recorded and stored on multiple devices in multiple locations all around the world as opposed to one central place. It also means that no one person, company, Goverment, authority or entity controls the data recording and storage process. Unlike centralized entities like the IRS in the U.S., Banks, and Colleges/Univeristies, as examples.
+    - Defined as data that is recorded and stored on multiple devices in multiple locations all around the world as opposed to one central place. It also means that no one person, company, Goverment, authority or entity controls the data recording and storage process. Unlike centralized entities like the IRS in the U.S., Banks, or Colleges/Universities, as examples.
+    
 2. Transparency
-    - relates to the way transactions are recorded on a ledger that is available for everyone to see. The data is saved on a network of computers around the world making the data impossible to be altered or affected. One example to compare this scenario to is how every tax dollar is spent by the United States Government. If the information is publicly available, it is easy to manipulate or forge since the U.S. Goverment controls that data unlike blockchain technology.
+    - Relates to the way transactions are recorded on a ledger that is available for everyone to see. The data is saved on a network of computers around the world making the data impossible to be altered or affected. One example to compare this scenario to is how every tax dollar is spent by the United States Government. If the information is publicly available, it is easy to manipulate or forge since the U.S. Goverment controls that data unlike blockchain technology.
+    
 3. Immutability
-    - simply means that the data recorded and stored on the blockchain cannot be forged or manipulated and that is through a process called cryptography and blockchain hashing.
+    - Simply means that the data recorded and stored on the blockchain cannot be forged or manipulated and that is through a process called cryptography and blockchain hashing.
 
 
 ## Bitcoin versus Ethereum - What's the difference? They are both crypto, right?
@@ -27,6 +33,8 @@ A 19-year-old programmer from Toronto, Vitalik Buterin, conceived the idea for *
 - *Bitocin* is a digital currency that people use as a form of payment. People transfer *Bitcoin* to and from each other or hold the currency long-term as an asset with value.
 
 - *Ethereum* is a programmable blockchain that people can build software on top of to create products and services. Due to the decentralized property of the blockchain, the software developers and programmers can build onto *Ethereum* with the ultimate goal of decentralized finance (DeFi). The aim is for a movement to transform the current financial system into a more transparent and trustworthy system.
+    
+- A good analogy would be that bitcoin is like iOS, and Ethereum is like Android (controlled vs open source).
 
 ## *Ethereum* speak - The basics <sup>6<sup> 
 
@@ -40,7 +48,7 @@ A 19-year-old programmer from Toronto, Vitalik Buterin, conceived the idea for *
 
 # What is *GAS*?
 
-- *GAS* is how transaction costs are computed for *ETH* transactions and considers bandwidth, space requirements, as well as, the computational difficulty of each transaction to calculate the appropriate amount fees needed to complete each transaction.
+- *GAS* is how transaction costs are computed for *ETH* transactions and considers bandwidth, space requirements, as well as, the computational difficulty of each transaction to calculate the appropriate amount of fees needed to complete each transaction.
 - When executing transactions on *Ethereum* you will see *GAS* prices denoted as *GWEI (a.k.a. Giga Wei)* units.
     - *GWEI* to *Ether* can be compared like 1 penny to 1 US Dollar.
 
@@ -55,7 +63,7 @@ A 19-year-old programmer from Toronto, Vitalik Buterin, conceived the idea for *
 - The base layer of *Ethereum* consists of a vast network of computers called *nodes*.
     - These *nodes* are connected to the internet with software installed on local computers that run on the *Ethereum* Blockchain. 
     - This base layer of *nodes* is where the transaction data is processed, validated and stored.
-    - While the *nodes* perform the computational work required to process transaction data, they are rewarded with Ether, dictated by the *GAS* calcualted for each transaction,
+    - While the *nodes* perform the computational work required to process transaction data, they are rewarded with Ether, dictated by the *GAS* calculated for each transaction,
 - The second layer on top of the base hardware layer acts as a software layer.
     - This software layer supports a programming language library which consists of solidity, viper, and bamboo.
     - Using these programming languages developers can write *smart contracts*.
