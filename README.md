@@ -2,14 +2,14 @@
 
 By: Camillo D'Orazio, Collin Holben, Justin John, Todd Shevlin - November 2020
 
-![Ethereum](ethereum.jpg)<sup>1<sup>
+<img src='https://www.uktech.news/wp-content/uploads/2019/09/shutterstock_776426233-898x505.jpg' width='550'><sup>15<sup>
 
 # Overview and Origin of ETH
 
 A 19-year-old programmer from Toronto, Vitalik Buterin, conceived the idea for *Ethereum*. The Ethereum white paper was released in 2013, the coin was launched in 2015 and broke into the mainstrain in 2017 when the price jumped by more than 1000% over the course of a few months.<sup>2</sup> **ETH** is the second most popular cryptocurrency by market capitalization and, arguably, the most popular blockchain platform in existence today. **ETH** provides a framework for a decentralized application on the bloackchain, has a large network of ERC-20 tokens and coined the term *"smart contracts"* <sup>3</sup> 
 
 # What is Blockchain technology and how does it work?
-*Blockchain* technology is highly sophisticated and a complex structure with many substructures. Blockchain allows for decentralization, i.e. no central regulatory body who oversees the transactions on the platform. Instead, it uses what is referred to as a *distributed or digital ledger* (NOTE: these terms are used interchangibly). The simplest way to describe what *Blockchain* is, or how it works is: “Picture a spreadsheet that is duplicated thousands of times across a network of computers. Then imagine that this network is designed to regularly update this spreadsheet and you have a basic understanding of the blockchain.” <sup>4</sup>
+*Blockchain* technology is highly sophisticated and a complex structure with many substructures. Blockchain allows for decentralization, i.e. no central regulatory body who oversees the transactions on the platform. Instead, it uses what is referred to as a *distributed or digital ledger* (NOTE: these terms are used interchangeably). The simplest way to describe what *Blockchain* is, or how it works is: “Picture a spreadsheet that is duplicated thousands of times across a network of computers. Then imagine that this network is designed to regularly update this spreadsheet and you have a basic understanding of the blockchain.” <sup>4</sup>
 
 ## There are 3 pillars of *Blockchain*:
     a.) Decentralization, 
@@ -102,7 +102,7 @@ ________________________________________________________________________________
 
 <sup>5 Reiff, N. (2020, June 16) *Bitcoin vs. Ethereum: What's the Difference?* Investopedia https://www.investopedia.com/articles/investing/031416/bitcoin-vs-ethereum-driven-different-purposes.asp.
 
-<sup>6 YouTube video ... Justin to document
+<sup>6 YouTube video: https://www.youtube.com/watch?v=DhoRtGCp4JI
 
 <sup>7 Denominations of Ether source: https://nagritech.com/wp-content/uploads/2020/04/Screenshot-22.png
 
