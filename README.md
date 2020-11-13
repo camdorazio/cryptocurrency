@@ -35,8 +35,17 @@ A 19-year-old programmer from Toronto, Vitalik Buterin, conceived the idea for *
 - *Bitocin* is a digital currency that people use as a form of payment. People transfer *Bitcoin* to and from each other or hold the currency long-term as an asset with value.
 
 - *Ethereum* is a programmable blockchain that people can build software on top of to create products and services. Due to the decentralized property of the blockchain, the software developers and programmers can build onto *Ethereum* with the ultimate goal of decentralized finance (DeFi). The aim is for a movement to transform the current financial system into a more transparent and trustworthy system.
-    
+
 - A good analogy would be that bitcoin is like iOS, and Ethereum is like Android (controlled vs open source).
+
+### Price Comparison between Bitcoin and Ethereum - past 5 years
+
+![ETH vs BTC Price](eth_btc_price.png)<sup>8<sup>
+
+
+![ETH Assets](eth_assets.png)<sup>8<sup>
+
+
 
 ## *Ethereum* speak - The basics <sup>6<sup> 
 
@@ -60,6 +69,11 @@ A 19-year-old programmer from Toronto, Vitalik Buterin, conceived the idea for *
 
 - The higher the amount of *GAS*, the faster the transaction will be processed.
 
+![Sum Trans](sum_eth__transactions.png)<sup>8<sup>
+    
+![Sum Trans Price](sum_transactions_price.png)<sup>8<sup>
+
+
 ## Basics of an *Ethereum* Network
 
 - The base layer of *Ethereum* consists of a vast network of computers called *nodes*.
@@ -73,18 +87,29 @@ A 19-year-old programmer from Toronto, Vitalik Buterin, conceived the idea for *
 - The combination of both the base layer and second layer creates a global decentralized super computer known as the *"Ethereum Virtual Machine"*. 
     - The combination of both layers eliminates the need for a central authority to govern your data or your finances like a governmentt, bank or legal system. 
 
+
 ## What network properties influence ETH price movements? - Visualizations
 
 - Visualizations of ETH price, transaction costs, mining difficulty and top ten transactions
-![ETH Price History](somefilename.png)<sup>8<sup>
-![ETH Transaction Costs](somefilename.png)<sup>8<sup>
-![ETH Mining Difficulty](somefilename.png)<sup>8<sup>
-![ETH Top Ten Transactions](somefilename.png)<sup>8<sup>
+
+![ETH Price](eth_price_plot.png)<sup>8<sup>
 
 ## What network properties influence ETH price movements? - Analysis
-![ETH Correlation of Transaction Costs and Price Movement](somefilename.png.png)<sup>8<sup>
-![ETH Mining Difficulty Impact on Price Movements](somefilename.png.png)<sup>8<sup>
-![Hedging vs. Traditional Asset Classes](somefilename.png.png)<sup>8<sup>
+
+
+## Investment Risk and Opportunity
+
+![Rolling STD](rolling_std_dev.png)<sup>8<sup>
+    
+![Heatmap](pct_change_heatmap.png)<sup>8<sup>
+    
+![Boxplot](pct_change_box_plot.png)<sup>8<sup>
+    
+![Sharpe](sharpe_ratios.png)<sup>8<sup>
+    
+![Drawdown](drawdown.png)<sup>8<sup>
+
+![Mining Difficulty](mining_difficulty_price.png)<sup>8<sup>
 
 ## Observations and Recommendations
 In looking at these charts closely, you will notice that Ethereum is extremely volatile, though is also a good hedge against other asset classes.  Also, despite the high volatility, it has a very high "alpha" (excess return), indicating that it can be highly profitable as long as you invest responsibly.  Compared with currencies, it does not correlate especially well.  This is to be expected as most of the comparison currencies are mature and heavily traded. 
