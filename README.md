@@ -4,16 +4,18 @@ By: Camillo D'Orazio, Collin Holben, Justin John, Todd Shevlin - November 2020
 
 <img src='https://www.uktech.news/wp-content/uploads/2019/09/shutterstock_776426233-898x505.jpg' width='550'><sup>15<sup>
 
-# Overview and Origin of ETH
+## Overview and Origin of ETH
 
 A 19-year-old programmer from Toronto, Vitalik Buterin, conceived the idea for *Ethereum*. The Ethereum white paper was released in 2013, the coin was launched in 2015 and broke into the mainstrain in 2017 when the price jumped by more than 1000% over the course of a few months.<sup>2</sup> **ETH** is the second most popular cryptocurrency by market capitalization and, arguably, the most popular blockchain platform in existence today. **ETH** provides a framework for a decentralized application on the bloackchain, has a large network of ERC-20 tokens and coined the term *"smart contracts"* <sup>3</sup> 
 
 ![ETH Top Ten Transactions](top_10.png)<sup>8<sup>
+    
+____________________________________________________________________________________________________________________
 
-# What is Blockchain technology and how does it work?
+## What is Blockchain technology and how does it work?
 *Blockchain* technology is highly sophisticated and a complex structure with many substructures. Blockchain allows for decentralization, i.e. no central regulatory body who oversees the transactions on the platform. Instead, it uses what is referred to as a *distributed or digital ledger* (NOTE: these terms are used interchangeably). The simplest way to describe what *Blockchain* is, or how it works is: “Picture a spreadsheet that is duplicated thousands of times across a network of computers. Then imagine that this network is designed to regularly update this spreadsheet and you have a basic understanding of the blockchain.” <sup>4</sup>
 
-## There are 3 pillars of *Blockchain*:
+### There are 3 pillars of *Blockchain*:
     a.) Decentralization, 
     b.) Transparency, and
     c.) Immutability
@@ -27,6 +29,7 @@ A 19-year-old programmer from Toronto, Vitalik Buterin, conceived the idea for *
 3. Immutability
     - Simply means that the data recorded and stored on the blockchain cannot be forged or manipulated and that is through a process called cryptography and blockchain hashing.
 
+____________________________________________________________________________________________________________________
 
 ## Bitcoin versus Ethereum - What's the difference? They are both crypto, right?
 
@@ -38,18 +41,20 @@ A 19-year-old programmer from Toronto, Vitalik Buterin, conceived the idea for *
 
 - A good analogy would be that bitcoin is like iOS, and Ethereum is like Android (controlled vs open source).
 
-### Price Comparison between Bitcoin and Ethereum - past 5 years
+### Price Comparison between Bitcoin and Ethereum - (Past 5 years)
 
 ![ETH vs BTC Price](eth_btc_price.png)<sup>8<sup>
 
 
+### ETH Price Compared to Different Asset Classes - (Past 5 years)
+
 ![ETH Assets](eth_assets.png)<sup>8<sup>
 
-
+____________________________________________________________________________________________________________________
 
 ## *Ethereum* speak - The basics <sup>6<sup> 
 
-# What is Ether
+## What is Ether
 
 - Ether is the *Ethereum* Blockchain native cryptocurrency that  operates similarly to *Bitcoin* that its a digital currency that can be transferred to people around the world, used as a form of payment or act as an asset of value.
 - *Bitcoin* is described as digital gold, while *Ether* is described as digital oil.
@@ -57,7 +62,7 @@ A 19-year-old programmer from Toronto, Vitalik Buterin, conceived the idea for *
 - To fuel the *Ethereum* network you have to pay for computing power and space required using Ether. The network charges transaction fees that is determined by a built-in pricing system known as *GAS*.
 - Another noteworthy difference between *Ether* and *Bitcoin ("BTC")* is that *BTC* has a fixed supply while *ETH* does not has a fixed supply.
 
-# What is *GAS*?
+## What is *GAS*?
 
 - *GAS* is how transaction costs are computed for *ETH* transactions and considers bandwidth, space requirements, as well as, the computational difficulty of each transaction to calculate the appropriate amount of fees needed to complete each transaction.
 - When executing transactions on *Ethereum* you will see *GAS* prices denoted as *GWEI (a.k.a. Giga Wei)* units.
@@ -68,6 +73,8 @@ A 19-year-old programmer from Toronto, Vitalik Buterin, conceived the idea for *
 - Denominations of power are represented as a Wei value is used to calculate *GAS* transaction costs.
 
 - The higher the amount of *GAS*, the faster the transaction will be processed.
+
+### Comparison between Sum of Daily Transactions & 
 
 ![Sum Trans](sum_eth__transactions.png)<sup>8<sup>
     
@@ -87,29 +94,41 @@ A 19-year-old programmer from Toronto, Vitalik Buterin, conceived the idea for *
 - The combination of both the base layer and second layer creates a global decentralized super computer known as the *"Ethereum Virtual Machine"*. 
     - The combination of both layers eliminates the need for a central authority to govern your data or your finances like a governmentt, bank or legal system. 
 
+____________________________________________________________________________________________________________________
 
-## What network properties influence ETH price movements? - Visualizations
+## ETH Price Analysis 
 
-- Visualizations of ETH price, transaction costs, mining difficulty and top ten transactions
+### A Closer look at ETH Price
 
 ![ETH Price](eth_price_plot.png)<sup>8<sup>
 
-## What network properties influence ETH price movements? - Analysis
 
+## Investment Analysis (Risks and Opportunities)
 
-## Investment Risk and Opportunity
+### Rolling Standard Deviation of ETH vs. Currencies & Asset Classes
 
 ![Rolling STD](rolling_std_dev.png)<sup>8<sup>
-    
+
+### Percentage Change of ETH vs. Currencies & Asset Classes
+
 ![Heatmap](pct_change_heatmap.png)<sup>8<sup>
-    
+
+### Risk of ETH vs. Currencies & Asset Classes
+
 ![Boxplot](pct_change_box_plot.png)<sup>8<sup>
-    
+
+### Sharpe Ratio of ETH vs. Currencies & Asset Classes
+
 ![Sharpe](sharpe_ratios.png)<sup>8<sup>
-    
+ 
+### Drawdown of ETH vs. Currencies & Asset Classes
+ 
 ![Drawdown](drawdown.png)<sup>8<sup>
 
+### Mining Difficulty vs. ETH Price
+
 ![Mining Difficulty](mining_difficulty_price.png)<sup>8<sup>
+
 
 ## Observations and Recommendations
 In looking at these charts closely, you will notice that Ethereum is extremely volatile, though is also a good hedge against other asset classes.  Also, despite the high volatility, it has a very high "alpha" (excess return), indicating that it can be highly profitable as long as you invest responsibly.  Compared with currencies, it does not correlate especially well.  This is to be expected as most of the comparison currencies are mature and heavily traded. 
@@ -125,6 +144,8 @@ In looking at these charts closely, you will notice that Ethereum is extremely v
 
 
 ____________________________________________________________________________________________________________________
+## Works Cited
+
 <sup>1 ETH coin image - https://www.howtogeek.com/thumbcache/2/200/832a97c90178c6a52354c0b42cea6954/wp-content/uploads/2018/04/img_5ae3b681c9ae2.jpg
 
 <sup>2 Bitcoin Magazine https://bitcoinmagazine.com/guides/who-created-ethereum
