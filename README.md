@@ -1,4 +1,4 @@
-# Cryptocurrency - A small view into the world of Ethereum ("ETH")
+# Cryptocurrency - A Small View Into the World of Ethereum ("ETH")
 
 By: Camillo D'Orazio, Collin Holben, Justin John, Todd Shevlin - November 2020
 
@@ -6,7 +6,7 @@ By: Camillo D'Orazio, Collin Holben, Justin John, Todd Shevlin - November 2020
 
 ## Overview and Origin of ETH
 
-A 19-year-old programmer from Toronto, Vitalik Buterin, conceived the idea for *Ethereum*. The Ethereum white paper was released in 2013, the coin was launched in 2015 and broke into the mainstrain in 2017 when the price jumped by more than 1000% over the course of a few months.<sup>2</sup> **ETH** is the second most popular cryptocurrency by market capitalization and, arguably, the most popular blockchain platform in existence today. **ETH** provides a framework for a decentralized application on the bloackchain, has a large network of ERC-20 tokens and coined the term *"smart contracts"* <sup>3</sup> 
+A 19-year-old Russian programmer from Toronto, Vitalik Buterin, conceived the idea for *Ethereum*. The Ethereum white paper was released in 2013, the coin was launched in 2015 and went mainstrain in 2017 when the price jumped by more than 1000% over the course of a few months.<sup>2</sup> **ETH** is the second most popular cryptocurrency by market capitalization and, arguably, the most popular blockchain platform in existence today. **ETH** provides a framework for a decentralized application on the blockchain, has a large network of ERC-20 tokens and coined the term *"smart contracts"* <sup>3</sup> 
 
 ![ETH Top Ten Transactions](top_10.png)<sup>8<sup>
     
@@ -16,15 +16,12 @@ ________________________________________________________________________________
 *Blockchain* technology is highly sophisticated and a complex structure with many substructures. Blockchain allows for decentralization, i.e. no central regulatory body who oversees the transactions on the platform. Instead, it uses what is referred to as a *distributed or digital ledger* (NOTE: these terms are used interchangeably). The simplest way to describe what *Blockchain* is, or how it works is: “Picture a spreadsheet that is duplicated thousands of times across a network of computers. Then imagine that this network is designed to regularly update this spreadsheet and you have a basic understanding of the blockchain.” <sup>4</sup>
 
 ### There are 3 pillars of *Blockchain*:
-    a.) Decentralization, 
-    b.) Transparency, and
-    c.) Immutability
     
 1. Decentralization
     - Defined as data that is recorded and stored on multiple devices in multiple locations all around the world as opposed to one central place. It also means that no one person, company, Goverment, authority or entity controls the data recording and storage process. Unlike centralized entities like the IRS in the U.S., Banks, or Colleges/Universities, as examples.
     
 2. Transparency
-    - Relates to the way transactions are recorded on a ledger that is available for everyone to see. The data is saved on a network of computers around the world making the data impossible to be altered or affected. One example to compare this scenario to is how every tax dollar is spent by the United States Government. If the information is publicly available, it is easy to manipulate or forge since the U.S. Goverment controls that data unlike blockchain technology.
+    - Relates to the way transactions are recorded on a ledger that is available for everyone to see. The data is saved on a network of computers around the world making the data impossible to be altered or affected. One example to compare this scenario to is how every tax dollar is spent by the United States Government. If the information is publicly available, it is easy to manipulate or forge since the U.S. Goverment controls that data unlike blockchain technology, where not one person or entity controls the data.
     
 3. Immutability
     - Simply means that the data recorded and stored on the blockchain cannot be forged or manipulated and that is through a process called cryptography and blockchain hashing.
@@ -35,9 +32,9 @@ ________________________________________________________________________________
 
 *Bitcoin* and *Ethereum* are both use cases of Blockchain Technology but with different purposes. <sup>5</sup>
 
-- *Bitocin* is a digital currency that people use as a form of payment. People transfer *Bitcoin* to and from each other or hold the currency long-term as an asset with value.
+- *Bitcoin* is a digital currency that people use as a form of payment. People transfer *Bitcoin* to and from each other or hold the currency long-term as an asset of value.
 
-- *Ethereum* is a programmable blockchain that people can build software on top of to create products and services. Due to the decentralized property of the blockchain, the software developers and programmers can build onto *Ethereum* with the ultimate goal of decentralized finance (DeFi). The aim is for a movement to transform the current financial system into a more transparent and trustworthy system.
+- *Ethereum* is a programmable blockchain that people can build software on top of to create products and services. Due to the decentralized property of the blockchain, software developers and programmers can build onto *Ethereum* with the ultimate goal of decentralized finance (DeFi). The aim is for a movement to transform the current financial system into a more transparent and trustworthy system.
 
 - A good analogy would be that bitcoin is like iOS, and Ethereum is like Android (controlled vs open source).
 
@@ -56,7 +53,7 @@ ________________________________________________________________________________
 
 ## What is Ether
 
-- Ether is the *Ethereum* Blockchain native cryptocurrency that  operates similarly to *Bitcoin* that its a digital currency that can be transferred to people around the world, used as a form of payment or act as an asset of value.
+- Ether is the *Ethereum* Blockchain native cryptocurrency that operates similarly to *Bitcoin* that its a digital currency that can be transferred to people around the world, used as a form of payment or act as an asset of value.
 - *Bitcoin* is described as digital gold, while *Ether* is described as digital oil.
 - Ether was designed with the intention of fueling the *Ethereum* Network.
 - To fuel the *Ethereum* network you have to pay for computing power and space required using Ether. The network charges transaction fees that is determined by a built-in pricing system known as *GAS*.
@@ -74,10 +71,12 @@ ________________________________________________________________________________
 
 - The higher the amount of *GAS*, the faster the transaction will be processed.
 
-### Comparison between Sum of Daily Transactions & 
+### Comparison between Sum of Daily Transactions & Daily Sum of ETH
 
 ![Sum Trans](sum_eth__transactions.png)<sup>8<sup>
     
+### Comparison between Sum of Daily Transactions & ETH Price
+
 ![Sum Trans Price](sum_transactions_price.png)<sup>8<sup>
 
 
@@ -88,7 +87,7 @@ ________________________________________________________________________________
     - This base layer of *nodes* is where the transaction data is processed, validated and stored.
     - While the *nodes* perform the computational work required to process transaction data, they are rewarded with Ether, dictated by the *GAS* calculated for each transaction,
 - The second layer on top of the base hardware layer acts as a software layer.
-    - This software layer supports a programming language library which consists of solidity, viper, and bamboo.
+    - This software layer supports a programming language library which consists of solidity, viper, bamboo, etc. 
     - Using these programming languages developers can write *smart contracts*.
     - *Smart contracts* make transactions trackable, transparent and permanent.
 - The combination of both the base layer and second layer creates a global decentralized super computer known as the *"Ethereum Virtual Machine"*. 
